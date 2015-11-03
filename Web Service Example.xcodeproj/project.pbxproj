@@ -14,6 +14,7 @@
 		F78DB1BC1BE8C2EC008A3CD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F78DB1BA1BE8C2EC008A3CD0 /* LaunchScreen.storyboard */; };
 		F78DB1C71BE8C2EC008A3CD0 /* Web_Service_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78DB1C61BE8C2EC008A3CD0 /* Web_Service_ExampleTests.swift */; };
 		F78DB1D21BE8C2EC008A3CD0 /* Web_Service_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78DB1D11BE8C2EC008A3CD0 /* Web_Service_ExampleUITests.swift */; };
+		F79C39A41BE9754D00771C63 /* AFNetworking in Resources */ = {isa = PBXBuildFile; fileRef = F79C39A31BE9754D00771C63 /* AFNetworking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		F78DB1CD1BE8C2EC008A3CD0 /* Web Service ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Web Service ExampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78DB1D11BE8C2EC008A3CD0 /* Web_Service_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web_Service_ExampleUITests.swift; sourceTree = "<group>"; };
 		F78DB1D31BE8C2EC008A3CD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F79C39A31BE9754D00771C63 /* AFNetworking */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AFNetworking; sourceTree = "<group>"; };
+		F79C39A51BE976B600771C63 /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +80,12 @@
 		F78DB1A51BE8C2EC008A3CD0 = {
 			isa = PBXGroup;
 			children = (
+				F79C39A51BE976B600771C63 /* bridge.h */,
 				F78DB1B01BE8C2EC008A3CD0 /* Web Service Example */,
 				F78DB1C51BE8C2EC008A3CD0 /* Web Service ExampleTests */,
 				F78DB1D01BE8C2EC008A3CD0 /* Web Service ExampleUITests */,
 				F78DB1AF1BE8C2EC008A3CD0 /* Products */,
+				F79C39A31BE9754D00771C63 /* AFNetworking */,
 			);
 			sourceTree = "<group>";
 		};
@@ -232,6 +237,7 @@
 				F78DB1BC1BE8C2EC008A3CD0 /* LaunchScreen.storyboard in Resources */,
 				F78DB1B91BE8C2EC008A3CD0 /* Assets.xcassets in Resources */,
 				F78DB1B71BE8C2EC008A3CD0 /* Main.storyboard in Resources */,
+				F79C39A41BE9754D00771C63 /* AFNetworking in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,10 +405,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "Web Service Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.timeplify.Web-Service-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = bridge.h;
 			};
 			name = Debug;
 		};
@@ -410,10 +418,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "Web Service Example/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.timeplify.Web-Service-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = bridge.h;
 			};
 			name = Release;
 		};
@@ -484,6 +494,7 @@
 				F78DB1D81BE8C2EC008A3CD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F78DB1D91BE8C2EC008A3CD0 /* Build configuration list for PBXNativeTarget "Web Service ExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +503,7 @@
 				F78DB1DB1BE8C2EC008A3CD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F78DB1DC1BE8C2EC008A3CD0 /* Build configuration list for PBXNativeTarget "Web Service ExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +512,7 @@
 				F78DB1DE1BE8C2EC008A3CD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
